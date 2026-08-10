@@ -81,8 +81,7 @@ Prepara PostgreSQL y levanta la API:
 
 ```bash
 npm run db:create
-npm run db:migrate
-npm run db:seed
+npm run db:reset
 npm run dev
 ```
 
