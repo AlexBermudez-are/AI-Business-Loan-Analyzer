@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Sovereign Fiscal: análisis financiero asistido por IA para solicitudes de préstamos empresariales."
+    />
+    <title>Sovereign Fiscal</title>
+    <script>
+      (() => {
+        try {
+          const supportedThemes = [
+            "sovereign",
+            "ocean",
+            "forest",
+            "graphite",
+            "burgundy",
+            "indigo",
+            "copper",
+            "arctic",
+            "midnight",
+            "plum",
+          ];
+          const storedTheme = localStorage.getItem("sovereign-fiscal:theme");
+          document.documentElement.dataset.theme = supportedThemes.includes(
+            storedTheme,
+          )
+            ? storedTheme
+            : "sovereign";
+        } catch {
+          document.documentElement.dataset.theme = "sovereign";
+        }
+      })();
+    </script>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>
